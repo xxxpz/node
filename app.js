@@ -1,14 +1,7 @@
 const express = require("express");
 const path = require("path");
 const indexRouter = require("./route/index");
-const mysql = require("mysql");
-const config = require("./config/mysql");
-
-console.log(config);
-
-var connection = mysql.createConnection(config.mysql);
-
-connection.connect();
+const connection = require("./mysql/index");
 
 const app = express();
 
